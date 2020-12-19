@@ -31,17 +31,22 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ==========Étape pour créer un projet Angular============
 1. Créer un répertoire Workspace dans l'emplacement désiré
 
-1. Entrer dans le répertoire et ouvrir un git bash afin d'exécuter la commande suivante pour créer un projet : ng n nomDuProjet --routing
+2. Entrer dans le répertoire et ouvrir un git bash afin d'exécuter la commande suivante pour créer un projet : ng n nomDuProjet --routing 
+Assurez-vous de changer nomDuProjet par le nom de projet désiré 
 
-2. Toujours dans le git bash, lancer Visual Studio code en exécutant : code .
+3. Toujours dans le git bash, pointez-vous dans le projet et lancer Visual Studio code: 
+cd nomDuProjet
+code .
 
-3. Installer les librairies:
+4. Installer les librairies dans cette ordre:
   npm i jquery
   npm i bootstrap
   npm i json-server 
   npm i @fortawesome/fontawesome-free --save
+  npm install
+  npm audit fix
 
-4. Configurer les options dans le fichier Angular.json du projet pour ajouter jQuery et bootstrap 
+5. Configurer les Styles et Scripts dans le fichier Angular.json du projet pour ajouter jQuery et bootstrap  comme-ci:
   "styles": [
    "node_modules/bootstrap/dist/css/bootstrap.min.css",
    "node_modules/@fortawesome/fontawesome-free/css/all.css",
@@ -52,12 +57,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
     "node_modules/bootstrap/dist/js/bootstrap.min.js"
   ]
 
-5. Dans app.module.ts, il faut importer ces 2 modules :
+6. Dans app.module.ts, importer ces 2 modules :
   import { HttpClientModule } from '@angular/common/http';
   import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
   Toujours dans app.module.ts, ajouter manuellement les deux modules dans la categorie "imports"
-
+  (Seulement faire cette étape si npm install n'a pas importé les mmodules automatiquement)
+  
 6. Supprimer le HTML du app.component.html et le remplacer par les balises suivantes :
   |-----------------|
   | <app-navbar>    |
@@ -68,13 +73,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 On rajoute notre propre port désiré.
 
 8. Dans la création du service de l'objet, il faut spécifier le port du http dans le constructeur : 
-super(http, "http://localhost:5050/holoMembers);
+pour holo-member.service.ts:
+super(http, "http://localhost:5050/holoMembers");
+et
+pour feedback.service.ts:
+super(http, "http://localhost:6060/feedbacks");
 
-
-9. Exécuter la commande suivante pour lancer le serveur Json dans le répertoire database: 
+9. Exécuter les commande suivante pour lancer le serveur Json à partir du répertoire database: 
 cd database
 
 json-server -w holoMembers.json --port 5050
 json-server -w feedbacks.json --port 6060
 
-10. Exécuter le projet dans le terminal avec la commande : npm start
+10. Exécuter le projet dans le terminal avec la commande : 
+npm start
