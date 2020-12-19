@@ -1,0 +1,13 @@
+.button{
+    background-color: rgba( 60, 60, 60, 0.9) ;
+    color: white;
+}
+
+.bg{
+    background-image: url('../../../../assets/image/holoMembers.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    height: 60vh;
+}
+

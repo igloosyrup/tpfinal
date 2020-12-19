@@ -1,0 +1,25 @@
+.bgContact{
+    background-image: url('../../../assets/image/holoMembers.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    height: 60vh;
+}
+
+input[type="name"],input[type="name"]:focus,
+input[type="email"], input[type="email"]:focus,
+textarea, textarea:focus
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white ;
+    border-radius: 0;
+    outline-width: 0;
+}
+
+.jebait{
+    position:absolute;
+    top: 30%;
+    left: 83%;
+    right: 15%;
+}

@@ -1,0 +1,44 @@
+{
+    "holoMembers": [
+      {
+        "firstName": "Haato",
+        "lastName": "Akai",
+        "age": 19,
+        "youtube": "https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg",
+        "profile": "../assets/member-images/haachama.png",
+        "id": 1
+      },
+      {
+        "id": 2,
+        "firstName": "Korone",
+        "lastName": "Inugami",
+        "age": 90,
+        "youtube": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q",
+        "profile": "../assets/member-images/korone.png"
+      },
+      {
+        "id": 3,
+        "firstName": "Pekora",
+        "lastName": "Usada",
+        "age": 111,
+        "youtube": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
+        "profile": "../assets/member-images/pekora.png"
+      },
+      {
+        "id": 4,
+        "firstName": "Rushia",
+        "lastName": "Uruha",
+        "age": 16,
+        "youtube": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ",
+        "profile": "../assets/member-images/rushia.png"
+      },
+      {
+        "firstName": "Mona",
+        "lastName": "Magus",
+        "age": 131,
+        "youtube": "https://www.youtube.com/c/NoEngrish",
+        "profile": "https://cdn.mos.cms.futurecdn.net/Kf7jRtb2x4TTMDwQG4Vv8M-320-80.png",
+        "id": 5
+      }
+    ]
+  }

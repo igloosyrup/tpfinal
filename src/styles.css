@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: Chicago;
+    src: url(./assets/fonts/Chicago-Regular.ttf);
+}
+
+.ng-invalid:not(form).ng-touched{
+
+    border: 2px solid red;
+
+}
+
+.holoBar{
+    background-color: rgba(39,162,232, 0.75);
+}
+
+.holoBackground{
+    background-color: rgb(39,162,232);
+}
+
+.holoFont{
+    font-family: Chicago;
+}
+
+.holoDropDown{
+    background-color: #5cbbfa;
+}
+
+.holoText{
+    color: #08c5ff;
+}
+
+@media (min-width: 1795px){
+    .large {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+
+@media (max-width: 1794px){
+    .medium {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+
+@media (max-width: 1100px){
+    .small{
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
+    }
+
+}

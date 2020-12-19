@@ -1,0 +1,59 @@
+<section style="margin-bottom: 10em">
+  <!-- Start background -->
+  <div class="bg" style="margin-bottom: 1em;">
+    <div style="background: rgba(1,1,1, 0.2); height: 60vh;">
+    </div>
+  </div>
+  <!-- End background -->
+
+  <!-- Start Read -->
+  <h1 class="text-center my-5 holoFont holoText display-3">{{tableName}}</h1>
+  <div class="container col-sm-12" style="margin-top: 2.5em; padding-top:5em; padding-bottom: 5em; background-color: lightcyan;">
+    <div class="table-responsive">
+      <table class="table holoFont mt-3 bg-light" style="border: 0.25em solid #5cbbfa;">
+        <thead class="text-light" style="font-size: 1.5em; background-color: #5cbbfa;">
+          <tr class="text-center">
+            <th></th>
+            <th scope="col" *ngFor="let item of tableHeadElement"> {{item}} </th>
+            <th scope="col"><i class="fab fa-youtube text-danger align-middle mr-1" style="font-size: 1.5em;"></i>
+              <span class="align-middle">Youtube</span>
+            </th>
+            <th scope="col">Operations</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let member of listeHoloMembers, let i = index" class="text-center">
+            <td class="d-flex justify-content-center">
+              <div class="card my-3 text-center" style="width: 26rem;">
+                <img [src]="[member.profile]" onerror="this.src='../../../../assets/image/img-not-found.png'"
+                  class="rounded d-block" style="width: 25em; height: 25em;">
+              </div>
+            </td>
+            <td class="align-middle" style="font-size: 1.5em;">{{member.lastName}}</td>
+            <td class="align-middle" style="font-size: 1.5em;">{{member.firstName}}</td>
+            <td class="align-middle" style="font-size: 1.5em;">{{member.age}}</td>
+            <td class="align-middle" style="font-size: 1.5em;"><a href="{{member.youtube}}"
+                class="text-capitalize font-weight-bold" target="_blank">visit me<i
+                  class="far fa-kiss-wink-heart ml-2 text-danger" style="font-size: 1.;"></i></a></td>
+            <td class="align-middle">
+              <div class="mb-2">
+                <a [routerLink]="['/read/', member.id]" class="btn button" style="width: 12em;"><i
+                    class="fas fa-eye float-left mt-1"></i>View Member</a>
+              </div>
+              <div class="mb-2">
+                <a [routerLink]="['/updateForm/', member.id]" class="btn button" style="width: 12em;"><i
+                    class="fas fa-edit float-left mt-1 mr-2"></i>Update Member</a>
+              </div>
+              <div class="mb-2">
+                <button type="button" (click)="deleteMember(member.id, i)" class="btn button" style="width: 12em;"><i
+                    class="fas fa-trash-alt float-left mt-1 mr-2"></i>Delete Member</button>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!-- End Read -->
+
+</section>

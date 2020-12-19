@@ -1,0 +1,94 @@
+<section class="holoBackground" style="padding-bottom: 10em; margin-bottom: 10em">
+  <!-- Start background -->
+  <div class="bg">
+    <div style="background: rgba(1,1,1, 0.2); height: 60vh;">
+    </div>
+  </div>
+  <!-- End background -->
+  <div class="bg-white mb-5" style="padding-top: 0.5em; padding-bottom: 0.5em;">
+    <h1 class="text-center my-5 holoText holoFont display-4">Want to be part of the group? Apply today!</h1>
+  </div>
+  <div class="container-fluid my-5 py-5">
+    <!-- left image -->
+    <div class="row justify-content-center">
+      <div class="col-sm-12 col-md-8 col-lg-5 text-center"
+        style="margin-bottom: 5em; margin-left: 5%; margin-right: 5%;">
+        <div class="card p-2" style="margin-top: 10%;">
+          <img [src]="['../../../assets/image/side.png']" alt="side" style="height: 100%; width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title display-4">Come join us!</h5>
+            <p class="card-text" style="font-size: 1.2em">We do a lot of fun stuff all together!!!</p>
+          </div>
+        </div>
+      </div>
+     <!-- end left image -->
+
+      <!-- form -->
+      <div class="col-sm-12 col-md-8 col-lg-5">
+        <div class="container rounded" style="background-color:rgba(255, 255, 255, 0.15)">
+          <img [src]="['../../../../assets/image/idols.png']" alt="banner" style="width: 100%;">
+        </div>
+        <div class="container" id="memberForm" style="padding-top: 1em; padding-bottom: 1em;">
+          <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()" style="padding: 5em;">
+            <div *ngIf="invalidFormMessage != ''" class="text-center">
+              <h3 class="text-danger font-weight-bold">{{invalidFormMessage}}</h3>
+            </div>
+
+            <div class="mb-4">
+              <input type="name" class="form-control" id="firstName" formControlName="firstName"
+                placeholder="First Name" style="width: 20em;">
+              <div *ngIf="form.firstName.invalid && (form.firstName.dirty || form.firstName.touched)"
+                class="text-danger font-weight-bold ml-2">
+                <div *ngIf="form.firstName.errors.required">The first name is required</div>
+                <div *ngIf="form.firstName.errors.minlength">First Name must be at least 4 characters</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <input type="name" class="form-control" id="lastName" formControlName="lastName" placeholder="Last Name"
+                style="width: 20em;">
+              <div *ngIf="form.lastName.invalid && (form.lastName.dirty || form.lastName.touched)"
+                class="text-danger font-weight-bold">
+                <div *ngIf="form.lastName.errors.required">The last name is required</div>
+                <div *ngIf="form.lastName.errors.minlength"> Last Name must be at least 4 characters</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <input type="number" class="form-control" id="age" formControlName="age" placeholder="Age"
+                style="width: 5em; ">
+              <div *ngIf="form.age.invalid && (form.age.dirty || form.age.touched)"
+                class="text-danger font-weight-bold ml-2">
+                <div *ngIf="form.age.errors.required">Age is required</div>
+                <div *ngIf="form.age.errors.min">Must be at least 18 years old</div>
+                <div *ngIf="form.age.errors.max">Age cannot exceed 3 digits</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <input type="url" class="form-control" id="youtube" formControlName="youtube"
+                placeholder="Youtube Channel">
+              <div *ngIf="form.youtube.invalid && (form.youtube.dirty || form.youtube.touched)"
+                class="text-danger font-weight-bold">
+                <div>The youtube channel url is required</div>
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <input type="url" class="form-control" id="profile" formControlName="profile"
+                placeholder="Profile Picture Url">
+              <div *ngIf="form.profile.invalid && (form.profile.dirty || form.profile.touched)"
+                class="text-danger font-weight-bold">
+                <div>The profile picture url is required</div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-light holoText font-weight-bold">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- end form -->
+    </div>
+
+  </div>
+
+</section>

@@ -1,0 +1,69 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top holoBar">
+        <div class="container-fluid">
+            <img src="../../../assets/image/navLogo.png" class="mr-4 rounded-circle" alt="logo" width="60em"
+                height="60em">
+
+            <a href="https://github.com/igloosyrup/TP-Final-420-345-G001-A20" target="_blank" class="navbar-brand text-light">
+                <span class="font-weight-bold" style="font-size: 1.5em">By Chen Zi Yu</span></a>
+
+            <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#nav"
+                aria-controls="#nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="nav">
+                <ul class="navbar-nav align-self-end text-center">
+                    <li class="nav-item dropdown d-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="navbar-toggle-icon"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/home']"
+                            class="nav-link font-weight-bold text-capitalize text-light navLinks mr-3">
+                            home
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown" data-toggle="dropdown">
+                        <a class="nav-link font-weight-bold text-capitalize text-light dropdown navLinks mr-3">
+                            tutorials
+                        </a>
+                        <div class="dropdown-menu holoDropDown">
+                            <a [routerLink]="['/tutoriel', 1]" class="dropdown-item link">Mini tutorial Angular 10</a>
+                            <a [routerLink]="['/tutoriel', 2]" class="dropdown-item link">Mini tutorial Crud</a>
+                            <a [routerLink]="['/tutoriel', 3]" class="dropdown-item link">Mini tutorial Relations</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a [routerLink]="['/formulaire']"
+                            class="nav-link font-weight-bold text-capitalize text-light navLinks mr-3">
+                            form
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/crud']"
+                            class="nav-link font-weight-bold text-capitalize text-light navLinks mr-3">
+                            c.r.u.d.
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/fun']"
+                            class="nav-link font-weight-bold text-capitalize text-light navLinks mr-3">
+                            fun
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/contact']"
+                            class="nav-link font-weight-bold text-capitalize text-light navLinks mr-3">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

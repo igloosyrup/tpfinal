@@ -1,0 +1,305 @@
+<div class="container-fluid" style="margin-top:6em">
+    <span [ngSwitch]="tutorielLinkId">
+        <ng-container *ngSwitchCase="1">
+            <div class="container-fluid mb-5">
+                <h1 class="text-capitalize text-center display-4 font-weight-bold">mini tutoriel angular 10 <span><i
+                            class="fab fa-angular text-danger"></i></span></h1>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h2>C'est quoi Angular?</h2>
+                    <p>Angular est un <span class="font-weight-bold">framework</span>pour développement web gratuit
+                        <span class="font-weight-bold">(Open Source) SPA
+                            (Single Page Application) en Typescript.</span>
+                        Il permet au développeurs de coder plus rapidement grâce aux commandes angulars qui permet de
+                        générer des templates.
+                    <p>Angular est un framework <span class="font-weight-bold">Open Source
+                        </span> pour le <span class="font-weight-bold">developpement front-end rapide de pages
+                            web SPA à l'aide du Typescript.</span>
+                    </p>
+                    <p>Un site dévelopé avec Angular est <span class="font-weight-bold">adapté pour toute platforme
+                            (Ordinateur, Mobile, etc.) et
+                            Responsive</span>
+                    </p>
+                    <p>De plus, Angular est un des frameworks Javascript les <span class="font-weight-bold">plus
+                            populaire principalement maintenu par
+                            google.</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>Préparation de votre environnement pour Angular 10</h3>
+                    <h4>Npm?</h4>
+                    <p>C'est quoi npm? Npm (node package manager) est le gestionnaire de "package" javascript et permet
+                        de placer les modules dans leur répertoire respective.</p>
+                    <p><span class="font-weight-bold">Tout d'abord il faut télécharger et installer node.js</span>
+                        <br><a href="https://nodejs.org/en/" target="_blank">Voici le lien pour téléchargé Node.js</a>
+                    </p>
+                    <span class="font-weight-bold">IMPORTANT!!! Si vous avez déjà un terminal d'installé qui permet
+                        d'exécuté des
+                        commandes linux, alors passer à la prochaine étape.</span>
+                    <p>Suite au téléchargement et à l'installation de Node.js, il faut télécharger
+                        GitBash.
+                        <br>
+                        <a href="https://git-scm.com/downloads" target="_blank">Télécharger selon votre système
+                            d'exploitation</a>
+                        <br>
+                    </p>
+                    <p>Une fois que vous avez Node.js d'installé, ainsi qu'un terminal disponible,
+                        exécutez les commandes suivantes pour vérifié que Node.js fonctionne:
+                        <br>
+                        <span class="font-weight-bold">node -v</span>
+                        <br>
+                        ensuite
+                        <br>
+                        <span class="font-weight-bold">npm -v</span>
+                    </p>
+                    Si les commandes retourne une erreur, alors redémarrer votre ordinateur et essayer à nouveau.
+                    <p>
+                        <span class="font-weight-bold">**Si ça ne fonctionne toujours pas veuillez consulter l'article
+                            suivant:</span>
+                        <br>
+                        <a href="https://love2dev.com/blog/node-is-not-recognized-as-an-internal-or-external-command/"
+                            target="_blank">https://love2dev.com/blog/node-is-not-recognized-as-an-internal-or-external-command/</a>
+                    </p>
+                    <hr>
+                    <h3>Installation de Angular 10 (Suite... )</h3>
+                    <p>Une fois que tout fonctionne, exécuté les commandes suivantes dans le répertoire de votre choix
+                        pour vos projets angular
+                        <br>
+                        <span class="font-weight-bold">Pour se pointer dans le répertoire de votre choix utilisez la
+                            syntaxe
+                            comme suit:
+                            <br>
+                            cd répertoire/chemin ou cd .. pour remonter d'un niveau.
+                            <br>
+                        </span>
+                        <br>
+                        <span class="font-weight-bold"> npm install -g @angular/cli</span> (pour installer angular dans
+                        le répertoire de manière globallement)
+                        <br>
+                        <span class="font-weight-bold"> npm install -g typescript --save-dev</span>(pour installer
+                        typescript dans le répertoire de manière globallement)
+                        <br>
+                        pour plus d'information sur Typescript visitez: <a
+                            href="https://www.typescriptlang.org/download">https://www.typescriptlang.org/download</a>
+                        <br>
+                        <span class="font-weight-bold">ng new my-first-project</span> (syntax pour créer un nouveau
+                        projet)
+                        <br>
+                        <span class="font-weight-bold">cd my-first-project</span> (commande pour se pointer dans le
+                        projet Angular)
+                        <br>
+                        <span class="font-weight-bold">npm install nomDeLaLibrairie</span>(commande pour installer une
+                        librairie externe à l'aide de NPM)
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-5">
+                    <h5>Pas assez d'information?</h5>
+                    <a href="https://angular.io/cli" target="_blank">Cliquez-ici pour plus d'information sur Angular</a>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="2">
+            <div class="container-fluid mb-4">
+                <h1 class="text-capitalize text-center display-4 font-weight-bold">mini tutoriel c.r.u.d.
+                    <span><i class="fas fa-file"></i></span>
+                </h1>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h2>C'est quoi le C.R.U.D.?</h2>
+                    <p>Le terme CRUD est composé de 4 termes. Il s'agit de:</p>
+                    <ul class="list-group col-sm-12 col-md-3 mb-3">
+                        <li class="list-group-item" style="font-size: 1.2em;"><span
+                                class="font-weight-bold">C</span>reate</li>
+                        <li class="list-group-item" style="font-size: 1.2em;"><span class="font-weight-bold">R</span>ead
+                        </li>
+                        <li class="list-group-item" style="font-size: 1.2em;"><span
+                                class="font-weight-bold">U</span>pdate</li>
+                        <li class="list-group-item" style="font-size: 1.2em;"><span
+                                class="font-weight-bold">D</span>elete</li>
+                        <p>En effet, ce sont les 4 opérations qui permet de manipuler des données stockées ou non.</p>
+                    </ul>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>C'est quoi Create?</h3>
+                    <p>Le mot create en anglais veut dire Créer en français, et cela signifie en informatique
+                        l'insertion d'une nouvelle entrée
+                        <span class="font-weight-bold">(dans un contexte de base de données)</span>, la création d'une
+                        nouvelle instance d'un objet
+                        <span class="font-weight-bold">(pour la programmation objet orienté)</span> ou une requête HTTP
+                        <span class="font-weight-bold">POST.</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>C'est quoi Read?</h3>
+                    <p>Le terme read en anglais veut dire <span class="font-weight-bold">Lire</span> en français. Le
+                        Read est essentiellement une méthode ou opération qui
+                        permet de lire/afficher les données que ce soit pour une base de données d'objets (en
+                        programmation objet orienté) ou d'une requête HTTP
+                        <span class="font-weight-bold">GET, getAll(), getByID(), etc.</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>C'est quoi Update?</h3>
+                    <p>Le terme update en anglais veut dire <span class="font-weight-bold">Mettre-à-jour</span> en
+                        français.
+                        Le update permet de mettre-à-jour des données et cela se fait à l'aide d'une requête
+                        <span class="font-weight-bold">UPDATE (dans un context de base de données), </span>
+                        d'une requête <span class="font-weight-bold">PUT (dans un contexte HTTP)</span> et finallement
+                        créer une méthode/fonction pour mettre-à-jour les données
+                        <span class="font-weight-bold">(Objets et non-objets).</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>C'est quoi Delete?</h3>
+                    <p>Delete signifie la suppression. La suppression de données est souvent appelé comme suit:
+                        la requête <span class="font-weight-bold">DELETE</span> (en base de données et en HTTP)
+                        <br>
+                        tandis qu'en programmation orienté objet, c'est à l'utilisateur de déterminer.
+                    </p>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchCase="3">
+            <div class="container-fluid mb-5">
+                <h1 class="text-capitalize text-center display-4 font-weight-bold">mini tutoriel relations
+                    <span><i class="fas fa-users"></i></span>
+                </h1>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h2>C'est quoi les relations?</h2>
+                    <p>Les relations permet determiner comment les objets(programmation objet orienté)/tables(context
+                        base de données) vont <span class="font-weight-bold">s'intéragir entre-eux et comment
+                            ces-derniers seront stockées dans une base de données.</span>
+                        En effet, les relations sont nécessaires lorsqu'il y a un besoin de stocker des données dans une
+                        base de données ou le besoin de programmer objet orienté.
+                    </p>
+                    <p>Il existe <span class="font-weight-bold">6 relations possibles.</span></p>
+                    <div class="container col-sm-12 col-md-3 mb-3" style="margin-left: 0; margin-right: 0;">
+                        <img [src]="['../../../assets/tutoriel/Relations.png']" alt="fleches"
+                            style="height: 100%; width: 100%;">
+                    </div>
+                    <h5>Les 6 flèches de relations avec exemples: </h5>
+                    <p><span class="font-weight-bold text-danger">L'association : </span>Une classe A <span
+                            class="font-italic">(un(e) action/verbe) mange </span> une classe B ou B <span
+                            class="font-italic">mange</span> A.
+                        <br>
+                        <span class="font-weight-bold">Multiplicité possible: </span>One to One, One To Many (vice
+                        versa) ou Many To Many
+                        <br>
+                        <span class="font-weight-bold">Nombre de relations avec différentes classes possibles:
+                        </span>Plusieurs
+                        <br>
+                        <span class="font-weight-bold">Direction de la flèche: </span>Uni ou Bidirectionnel
+                    </p>
+                    <hr>
+                    <p>
+                        <span class="font-weight-bold text-danger">L'héritage/généralisation : </span>Une classe B
+                        hérite (extends en Java, Typescript) de la classe A.
+                        <br>
+                        <span class="font-weight-bold">Multiplicité possible: </span>One to One, One To Many (vice
+                        versa) ou Many To Many
+                        <br>
+                        <span class="font-weight-bold">Nombre de relations avec autres classes possibles: </span>Un seul
+                        <br>
+                        <span class="font-weight-bold">Direction de la flèche: </span>Unidirectionel
+                    </p>
+                    <hr>
+                    <p>
+                        <span class="font-weight-bold text-danger">La dépendance : </span>Classe A dépend de Classe B.
+                        (lorsqu'il y a modifcation dans la classe B, la classe A les aura aussi)
+                        <br>
+                        <span class="font-weight-bold">Multiplicité possible: </span>One to One et Many to One
+                        <br>
+                        <span class="font-weight-bold">Nombre de relations avec autres classes possibles: </span>Un seul
+                        <br>
+                        <span class="font-weight-bold">Direction de la flèche: </span>Unidirectionel
+                    </p>
+                    <hr>
+                    <p>
+                        <span class="font-weight-bold text-danger">Composition : </span>Classe A est composé de Classe
+                        B, une nouvelle instance A doit absolument créer une classe B dans son constructeur.
+                        <br>
+                        <span class="font-weight-bold">IMPORTANT la suppréssion est bidirectionel,
+                            C'est-à-dire que les classes liées à la composition sont supprimées</span>
+                        <br>
+                        Voici un exemple d'une composition:
+                        <br>
+                        Class A &#123; b:B;
+                        <br>
+                        constructor()&#123; this.b = new B() &#125;
+                        <br>
+                        &#125;
+                        <br>
+                        <span class="font-weight-bold">Multiplicité possible: </span>One to One, One To Many (vice
+                        versa) ou Many To Many
+                        <br>
+                        <span class="font-weight-bold">Nombre de relations avec autres classes possibles:
+                        </span>Plusieurs (Recommendé* un Seul)
+                        <br>
+                        <span class="font-weight-bold">Direction de la flèche: </span> Unidirectionel
+                    </p>
+                    <hr>
+                    <p>
+                        <span class="font-weight-bold text-danger">Aggrégation : </span>Classe A est en Aggrégation avec
+                        Classe B.
+                        Contrairement à la composition, lorsque une classe est supprimé l'autre classe ne l'ait pas.
+                        <br>
+                        Voici un exemple d'une aggrégation:
+                        <br>
+                        Class A &#123; b:B;
+                        <br>
+                        constructor(b:B)&#123; this.b = b &#125;
+                        <br>
+                        &#125;
+                        <br>
+                        <span class="font-weight-bold">Multiplicité possible: </span> One to One, One To Many (vice
+                        versa) ou Many To Many
+                        <br>
+                        <span class="font-weight-bold">Nombre de relations avec autres classes possibles: </span>
+                        Plusieurs
+                        <br>
+                        <span class="font-weight-bold">Direction de la flèche: </span>Unidirectionel
+                    </p>
+                    <hr>
+                </div>
+                <div class="container-fluid mt-3 mb-4">
+                    <h3>La multiplicité</h3>
+                    <h5>Il existe trois types possibles:</h5>
+                    <p>
+                        <span class="font-weight-bold">One-To-One : </span>Classe A 0,1 ... 0,1 B Classe B
+                    </p>
+                    <p>
+                        <span class="font-weight-bold">One-To-Many : </span>Classe A 0,1 ... 0,n Classe B ou Classe A
+                        0,n ... 0,1 Classe B
+                    <p>
+                        <span class="font-weight-bold">Many-To-Many : </span>Classe A 0,n ... 0,n Classe B
+                        <br>
+                        <span class="font-weight-bold text-danger">*Remarque: lorsqu'il y a un many to many, la relation
+                            many to many nécessite une troisième table qui contiendra la relation entre Classe A et
+                            Classe B</span>
+                    </p>
+                </div>
+                <hr>
+                <div class="container-fluid mt-3 mb-4">
+                    <h5>Pour plus d'information cliquez le lien ci-dessous</h5>
+                    <a
+                        href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/">https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/</a>
+                </div>
+            </div>
+        </ng-container>
+
+        <ng-container *ngSwitchDefault>
+            <div>
+                <h1 class="text-capitalize text-center display-4 font-weight-bold">Tutoriel a venir!</h1>
+            </div>
+        </ng-container>
+    </span>
+</div>

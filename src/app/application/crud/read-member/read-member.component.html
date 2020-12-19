@@ -1,0 +1,64 @@
+<section>
+    <div class="container-fluid col-sm-12 mb-5 holoFont" style="margin-top:6em">
+        <h1 class="text-center text-capitalize display-3 mb-4 holoText">viewing member</h1>
+        <div class="row justify-content-center">
+            <!-- start profile card -->
+            <div class="card col small medium large mr-3 mb-5" style="width: 25rem;">
+                <img [src]="[holoMember.profile]" onerror="this.src='../../../../assets/image/img-not-found.png'"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title text-capitalize">name: {{holoMember.lastName}} {{holoMember.firstName}}</h2>
+                    <p class="card-text">
+                        <i class="fab fa-youtube fa-3x text-danger align-middle"></i>
+                        <a href="{{holoMember.youtube}}" target="_blank" class="ml-2 font-weight-bold align-middle"
+                            style="font-size: 1.5em;">Come visit my channel!</a>
+                    </p>
+                </div>
+            </div>
+            <!-- End profile card  -->
+
+            <!-- Start of read-member form -->
+            <div class="col pt-2 small medium large holoBackground text-light font-weight-bold">
+                <form [formGroup]="readMemberForm">
+                    <h2 class="text-capitalize text-center my-4" style="font-size: 2.3em;">member information</h2>
+                    <div class="form-group mb-3">
+                        <label for="firstName" class="form-label text-capitalize">first name</label>
+                        <input type="name" class="form-control" id="firstName" formControlName="firstName"
+                            [(ngModel)]="holoMember.firstName" readonly>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="lastName" class="form-label text-capitalize">last name</label>
+                        <input type="name" class="form-control" id="lastName" formControlName="lastName"
+                            [(ngModel)]="holoMember.lastName" readonly>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="age" class="form-label text-capitalize">age</label>
+                        <input type="number" class="form-control" id="age" formControlName="age"
+                            [(ngModel)]="holoMember.age" readonly>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="youtube" class="form-label text-capitalize">youtube channel</label>
+                        <input type="url" class="form-control" id="youtube" formControlName="youtube"
+                            [(ngModel)]="holoMember.youtube" readonly>
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="profile" class="form-label text-capitalize">profile picture url</label>
+                        <input type="url" class="form-control" id="profile" formControlName="profile"
+                            [(ngModel)]="holoMember.profile" readonly>
+                    </div>
+                    <div class="form-group text-capitalize">
+                        <div class="text-right">
+                            <a [routerLink]="['/crud']" class="ml-3 btn rounded-pill bg-white">Back</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- End of read-member form -->
+        </div>
+    </div>
+</section>

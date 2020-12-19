@@ -1,0 +1,18 @@
+{
+  "feedbacks": [
+    {
+      "firstName": "knee",
+      "lastName": "bich",
+      "email": "lksdhjglkj",
+      "comment": "your website sucks",
+      "id": 1
+    },
+    {
+      "firstName": "ok",
+      "lastName": "ok",
+      "email": "boomer@gmail.com",
+      "comment": "ok boomer!",
+      "id": 2
+    }
+  ]
+}

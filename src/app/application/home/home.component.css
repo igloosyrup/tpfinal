@@ -1,0 +1,25 @@
+.bg{
+    background-image: url('../../../assets/image/holoMembers.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    height: 100vh;
+}
+.welcome{
+    color: white;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    font-weight: bold;
+
+}
+
+#projectSection{
+  background-color: lightcyan;
+}
+
+#projectHololive{
+    background-color: #27a2e8;
+}
+

@@ -1,0 +1,93 @@
+<section>
+    <div class="container-fluid col-sm-12 mb-5 holoFont" style="margin-top:6em">
+        <h1 class="text-center text-capitalize display-3 mb-4 holoText">update Member</h1>
+        <div class="row justify-content-center">
+            <!-- start profile card -->
+            <div class="card col small medium large mr-3 mb-5" style="width: 25rem;">
+                <img [src]="[holoMember.profile]" onerror="this.src='../../../../assets/image/img-not-found.png'"
+                    class="card-img-top">
+                <div class="card-body">
+                    <h2 class="card-title text-capitalize">name: {{holoMember.lastName}} {{holoMember.firstName}}</h2>
+                    <p class="card-text">
+                        <i class="fab fa-youtube fa-3x text-danger align-middle"></i><a href="{{holoMember.youtube}}"
+                            target="_blank" class="ml-2 font-weight-bold align-middle" style="font-size: 1.5em;">Come
+                            visit my channel!</a>
+                    </p>
+                </div>
+            </div>
+            <!-- end profile card  -->
+            
+            <!-- Start of update-member form -->
+            <div class="col pt-2 small medium large holoBackground text-light font-weight-bold">
+                <form [formGroup]="updateForm" (ngSubmit)="updateMember()">
+                    <div *ngIf="invalidFormMessage != ''" class="text-center">
+                        <h3 class="text-danger font-weight-bold">{{invalidFormMessage}}</h3>
+                    </div>
+                    <h2 class="text-capitalize text-center my-4" style="font-size: 2.3em;">member information</h2>
+                    <div class="form-group mb-3">
+                        <label for="firstName" class="form-label text-capitalize">first name</label>
+                        <input type="name" class="form-control" id="firstName" formControlName="firstName"
+                            [(ngModel)]="holoMember.firstName">
+                        <div *ngIf="form.firstName.invalid && (form.firstName.dirty || form.firstName.touched)"
+                            class="text-danger font-weight-bold ml-2">
+                            <div *ngIf="form.firstName.errors.required">First Name is required</div>
+                            <div *ngIf="form.firstName.errors.minlength">First Name must be at least 4 characters</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="lastName" class="form-label text-capitalize">last name</label>
+                        <input type="name" class="form-control" id="lastName" formControlName="lastName"
+                            [(ngModel)]="holoMember.lastName">
+                        <div *ngIf="form.lastName.invalid && (form.lastName.dirty || form.lastName.touched)"
+                            class="text-danger font-weight-bold">
+                            <div *ngIf="form.lastName.errors.required"> Last Name is required</div>
+                            <div *ngIf="form.lastName.errors.minlength"> Last Name must be at least 4 characters</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="age" class="form-label text-capitalize">age</label>
+                        <input type="number" class="form-control" id="age" formControlName="age"
+                            [(ngModel)]="holoMember.age">
+                        <div *ngIf="form.age.invalid && (form.age.dirty || form.age.touched)"
+                            class="text-danger font-weight-bold ml-2">
+                            <div *ngIf="form.age.errors.required">Age is required</div>
+                            <div *ngIf="form.age.errors.min">Must be at least 18 years old</div>
+                            <div *ngIf="form.age.errors.max">Age cannot exceed 3 digits</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label for="youtube" class="form-label text-capitalize">youtube channel</label>
+                        <input type="url" class="form-control" id="youtube" formControlName="youtube"
+                            [(ngModel)]="holoMember.youtube">
+                        <div *ngIf="form.youtube.invalid && (form.youtube.dirty || form.youtube.touched)"
+                            class="text-danger font-weight-bold ml-2">
+                            <div *ngIf="form.youtube.errors.required">Youtube channel is required</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label for="profile" class="form-label text-capitalize">profile picture url</label>
+                        <input type="url" class="form-control" id="profile" formControlName="profile"
+                            [(ngModel)]="holoMember.profile">
+                        <div *ngIf="form.profile.invalid && (form.profile.dirty || form.profile.touched)"
+                            class="text-danger font-weight-bold ml-2">
+                            <div *ngIf="form.profile.errors.required">Profile picture Url is required</div>
+                        </div>
+                    </div>
+                    <div class="form-group text-capitalize">
+                        <div class="text-right">
+                            <button type="submit"
+                                class="btn text-capitalize ml-3 mr-2 rounded-pill bg-white holoText">update</button>
+                            <a [routerLink]="['/crud']" class="btn rounded-pill bg-white">cancel</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- End of update-member form -->
+
+        </div>
+    </div>
+</section>
