@@ -1,0 +1,57 @@
+<section class="bg-light p-5">
+    <div class="row pb-4">
+
+        <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+            <div class="text-center col">
+                <h1 class="h4">Enjoy The Video/Music</h1>
+            </div>
+            <div class="card bg-light mb-3 text-center">
+                <div class="card-body" *ngIf="videoSelected">
+                    <h5 class="card-title text-primary">{{ videoSelected.author }}</h5>
+                    <h6 class="card-title text-info">{{ videoSelected.title }}</h6>
+                    <h6 class="card-title text-secondary">{{ videoSelected.range }}</h6>
+                </div>
+                <div class="card-body" *ngIf="!videoSelected">
+                    <div class="alert alert-danger" role="alert">
+                        Select a video or song on the list to see the clip<br>
+                        <i class="fab fa-youtube fa-2x text-danger"></i>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="videoSelected" class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item"
+                    [src]="('https://www.youtube.com/embed/' + videoSelected.url) | youtube" allowfullscreen></iframe>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7">
+            <div class="form-group">
+                <label class="text-primary font-weight-bold">Relax and Enjoy The Video/Music</label>
+                <select class="form-control text-primary font-weight-bold" id="exampleFormControlSelect"
+                    (change)="onChange($event)">
+                    <option value="1">2020</option>
+                </select>
+            </div>
+            <table class="table table-hover table-striped table-bordered table-responsive-md table-sm">
+                <thead>
+                    <tr>
+                        <th class="text-secondary" style="text-align:center;">Video</th>
+                        <th class="text-secondary" style="text-align:center;">Range</th>
+                        <th class="text-primary" style="text-align:center;">Artist</th>
+                        <th class="text-info" style="cursor: pointer;text-align:center;">Title</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let video of videos" class="table-{{ video.url }}" (click)="select(video)">
+                        <td class="text-secondary" style="cursor: pointer;text-align:center"><i
+                                class="fab fa-youtube text-danger"></i></td>
+                        <td class="text-secondary" style="cursor: pointer;text-align:center">{{ video.range }}</td>
+                        <td class="text-primary" style="cursor: pointer;text-align:center">{{ video.author }}</td>
+                        <td class="text-info" style="cursor: pointer;text-align:center">{{ video.title }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

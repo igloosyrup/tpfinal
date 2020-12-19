@@ -9,6 +9,7 @@ import { FormulaireComponent } from './application/formulaire/formulaire.compone
 import { FunComponent } from './application/fun/fun.component';
 import { HomeComponent } from './application/home/home.component';
 import { TutorielsComponent } from './application/tutoriels/tutoriels.component';
+import { YoutubeComponent } from './application/youtube/youtube/youtube.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
       { path: ':id', component: TutorielsComponent },
     ]
   },
-
+  {path: 'youtube', component: YoutubeComponent},
   { path: 'read/:id', component: ReadMemberComponent },
   { path: 'updateForm/:id', component: UpdateComponent },
   { path: 'formulaire', component: FormulaireComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
 
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'youtube', loadChildren: () => import('./application/youtube/youtube/youtube.module').then(m => m.YoutubeModule) },
   { path: '**', component: ErreurComponent }
 ];
 

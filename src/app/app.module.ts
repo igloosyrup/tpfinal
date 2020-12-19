@@ -17,6 +17,7 @@ import { HomeComponent } from './application/home/home.component';
 import { ErreurComponent } from './application/erreur/erreur.component';
 import { TutorielsComponent } from './application/tutoriels/tutoriels.component';
 import { ReadMemberComponent } from './application/crud/read-member/read-member.component';
+// import {YoutubeComponent} from './application/youtube/youtube/youtube.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReadMemberComponent } from './application/crud/read-member/read-member.
     HomeComponent,
     ErreurComponent,
     TutorielsComponent,
-    ReadMemberComponent
+    ReadMemberComponent,
+    // YoutubeComponent
   ],
   imports: [
     CommonModule,
