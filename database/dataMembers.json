@@ -5,7 +5,7 @@
       "lastName": "Akai",
       "age": 19,
       "youtube": "https://www.youtube.com/channel/UC1CfXB_kRs3C-zaeTG3oGyg",
-      "profile": "../assets/member-images/haachama.png",
+      "profile": "./assets/member-images/haachama.png",
       "id": 1
     },
     {
@@ -14,7 +14,7 @@
       "lastName": "Inugami",
       "age": 90,
       "youtube": "https://www.youtube.com/channel/UChAnqc_AY5_I3Px5dig3X1Q",
-      "profile": "../assets/member-images/korone.png"
+      "profile": "./assets/member-images/korone.png"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "lastName": "Usada",
       "age": 111,
       "youtube": "https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ",
-      "profile": "../assets/member-images/pekora.png"
+      "profile": "./assets/member-images/pekora.png"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "lastName": "Uruha",
       "age": 16,
       "youtube": "https://www.youtube.com/channel/UCl_gCybOJRIgOXw6Qb4qJzQ",
-      "profile": "../assets/member-images/rushia.png"
+      "profile": "./assets/member-images/rushia.png"
     },
     {
       "firstName": "Mona",
